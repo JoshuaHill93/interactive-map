@@ -15,10 +15,10 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
   const marker = L.marker([33.8584324356198, -117.32376368845999]).addTo(map)
     .bindPopup('You are here.')
-    .openPopup();
+    
 
 const polygon =L.polygon([
-    [33.887812,-117.279917],
+    [33.936081,-117.288378],
     [33.882569,-117.368245],
     [33.834904,-117.351034],
     [33.844527,-117.283921],
@@ -27,12 +27,12 @@ const polygon =L.polygon([
     ]);
      polygon.addTo(map);
 
-     const fb = L.marker([33.882569,-117.368245]).bindPopup('farmerboys')
-     const lmm = L.marker([33.834904,-117.351034]).bindPopup('lake mathews market')
-     const sc = L.marker([33.936081, -117.288378]).bindPopup('sams club')
+     const sc = L.marker([33.936081, -117.288378]).bindPopup('Sams Club').addTo(map).openPopup()
+     const fb = L.marker([33.882569,-117.368245]).bindPopup('Farmerboys').addTo(map).openPopup()
+     const lmm = L.marker([33.834904,-117.351034]).bindPopup('Lake Mathews Market').addTo(map).openPopup()
+     const tms = L.marker([33.844527, -117.283921]).bindPopup('Tomas Rivera Middle School').addTo(map).openPopup()
+     const cm = L.marker([33.887812, -117.279917]).bindPopup('Cemetery').addTo(map).openPopup()
     
-     const cm = L.marker([33.887812, -117.279917]).bindPopup('cemetery')
-     const tms = L.marker([33.844527, -117.283921]).bindPopup('tomas rivera middle school')
 const stations = L.layerGroup([sc,fb,lmm,tms,cm]).add(map)
 
 
